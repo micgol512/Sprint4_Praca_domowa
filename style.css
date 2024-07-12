@@ -1,0 +1,45 @@
+main > div {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  /* justify-content: center; */
+}
+ul {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2px;
+}
+li {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2px;
+}
+li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+}
+.modifityBtn,
+.deleteBtn {
+  height: 20px;
+  width: auto;
+}
+input:disabled {
+  color: black;
+  border: none;
+}
+li:nth-child(2n + 1) {
+  background-color: rgb(116, 246, 255);
+}
+li:nth-child(2n) {
+  background-color: rgb(209, 255, 167);
+}
